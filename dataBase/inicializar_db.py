@@ -1,6 +1,6 @@
 import sqlite3
 def inicializar_base_datos():
-    conexion = sqlite3.connect("mi_proyecto.db")
+    conexion = sqlite3.connect("empacuenta.db")
     cursor = conexion.cursor()
 
     # Crear tablas
@@ -22,6 +22,19 @@ def inicializar_base_datos():
     """)
 
     # Agrega el resto de las tablas aquí
+
+# Crear tabla Recetas_Ingredientes (relación)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Recetas_Ingredientes (
+        id_receta INTEGER,
+        id_ingrediente INTEGER,
+        cantidad REAL NOT NULL,
+        PRIMARY KEY (id_receta, id_ingrediente),
+        FOREIGN KEY (id_receta) REFERENCES Recetas(id_receta),
+        FOREIGN KEY (id_ingrediente) REFERENCES Ingredientes(id_ingrediente)
+    );
+    """)
+
 
     conexion.commit()
     conexion.close()

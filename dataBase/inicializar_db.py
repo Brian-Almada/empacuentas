@@ -35,6 +35,54 @@ def inicializar_base_datos():
     );
     """)
 
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Produccion (
+        id_produccion INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_receta INTEGER,
+        cantidad_producida INTEGER NOT NULL,
+        fecha DATE DEFAULT CURRENT_DATE,
+        FOREIGN KEY (id_receta) REFERENCES Recetas(id_receta)
+    );
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Ventas (
+        id_venta INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_receta INTEGER,
+        cantidad_vendida INTEGER NOT NULL,
+        fecha DATE DEFAULT CURRENT_DATE,
+        FOREIGN KEY (id_receta) REFERENCES Recetas(id_receta)
+    );
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Inversiones (
+        id_inversion INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        descripcion TEXT,
+        costo REAL NOT NULL,
+        fecha_adquisicion DATE NOT NULL
+    );
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS GastosFijos (
+        id_gasto_fijo INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL
+        monto REAL NOT NULL,
+        frecuencia TEXT NOT NULL CHECK (frecuencia IN ('mensual', 'anual'))
+    );
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS DeudasProveedores (
+        id_deuda INTEGER PRIMARY KEY AUTOINCREMENT,
+        proveedor TEXT NOT NULL,
+        monto REAL NOT NULL,
+        fecha_vencimiento DATE NOT NULL,
+        estado TEXT NOT NULL CHECK (estado IN ('pendiente', 'pagado'))
+    );
+    """)
 
     conexion.commit()
     conexion.close()

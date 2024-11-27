@@ -68,7 +68,7 @@ def inicializar_base_datos():
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS GastosFijos (
         id_gasto_fijo INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre TEXT NOT NULL
+        nombre TEXT NOT NULL,
         monto REAL NOT NULL,
         frecuencia TEXT NOT NULL CHECK (frecuencia IN ('mensual', 'anual'))
     );

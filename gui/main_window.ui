@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>579</width>
-    <height>310</height>
+    <width>600</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -255,7 +255,7 @@ font: 77 10pt &quot;Arial Black&quot;;
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <item>
-              <widget class="QPushButton" name="bt_basedatos">
+              <widget class="QPushButton" name="btn_basedatos">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -278,7 +278,7 @@ font: 77 10pt &quot;Arial Black&quot;;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="btn_registrar">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -301,7 +301,7 @@ font: 77 10pt &quot;Arial Black&quot;;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="btn_actualizar">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -324,7 +324,7 @@ font: 77 10pt &quot;Arial Black&quot;;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_4">
+              <widget class="QPushButton" name="btn_eliminar">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -347,7 +347,7 @@ font: 77 10pt &quot;Arial Black&quot;;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_5">
+              <widget class="QPushButton" name="btn_ajustar">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -577,13 +577,13 @@ border: 1px solid rgb(236, 111, 9);
                       <number>30</number>
                      </property>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit"/>
+                      <widget class="QLineEdit" name="reg_nombre"/>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_2"/>
+                      <widget class="QLineEdit" name="reg_precio"/>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_3"/>
+                      <widget class="QLineEdit" name="reg_unidad"/>
                      </item>
                     </layout>
                    </item>
@@ -618,11 +618,11 @@ border: 1px solid rgb(236, 111, 9);
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_5">
                    <item>
-                    <widget class="QLabel" name="label_8">
+                    <widget class="QLabel" name="asignado_registrar">
                      <property name="minimumSize">
                       <size>
                        <width>200</width>
-                       <height>0</height>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="text">
@@ -647,9 +647,15 @@ border: 1px solid rgb(236, 111, 9);
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton">
+                    <widget class="QPushButton" name="bt_registrar">
+                     <property name="minimumSize">
+                      <size>
+                       <width>120</width>
+                       <height>30</height>
+                      </size>
+                     </property>
                      <property name="text">
-                      <string>PushButton</string>
+                      <string>REGISTRAR</string>
                      </property>
                     </widget>
                    </item>
@@ -692,10 +698,10 @@ border: 1px solid rgb(236, 111, 9);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_4"/>
+                    <widget class="QLineEdit" name="act_buscar"/>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_6">
+                    <widget class="QPushButton" name="bt_buscar_act">
                      <property name="text">
                       <string>BUSCAR</string>
                      </property>
@@ -742,13 +748,13 @@ border: 1px solid rgb(236, 111, 9);
                       <number>30</number>
                      </property>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_5"/>
+                      <widget class="QLineEdit" name="act_nombre"/>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_6"/>
+                      <widget class="QLineEdit" name="act_precio"/>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_7"/>
+                      <widget class="QLineEdit" name="act_unidad"/>
                      </item>
                     </layout>
                    </item>
@@ -783,7 +789,7 @@ border: 1px solid rgb(236, 111, 9);
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_7">
                    <item>
-                    <widget class="QLabel" name="label_9">
+                    <widget class="QLabel" name="asignado_actualizar">
                      <property name="minimumSize">
                       <size>
                        <width>120</width>
@@ -809,7 +815,7 @@ border: 1px solid rgb(236, 111, 9);
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_7">
+                    <widget class="QPushButton" name="bt_actualizar">
                      <property name="minimumSize">
                       <size>
                        <width>120</width>
@@ -825,7 +831,109 @@ border: 1px solid rgb(236, 111, 9);
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_eliminar"/>
+               <widget class="QWidget" name="page_eliminar">
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="text">
+                    <string>ELIMINAR PRODUCTO</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QLabel" name="label_14">
+                     <property name="text">
+                      <string>NOMBRE PRODUCTO:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="eliminar_buscar"/>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="bt_buscar_borrar">
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>BUSCAR</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QTableWidget" name="tabla_borrar">
+                   <column>
+                    <property name="text">
+                     <string>NOMBRE</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>PRECIO</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>UNIDAD</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QLabel" name="asignado_eliminar">
+                     <property name="minimumSize">
+                      <size>
+                       <width>120</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_7">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="bt_eliminar">
+                     <property name="minimumSize">
+                      <size>
+                       <width>120</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ELIMINAR</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
                <widget class="QWidget" name="page_ajustar"/>
               </widget>
              </item>

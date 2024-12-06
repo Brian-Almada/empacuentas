@@ -8,9 +8,7 @@ def listar_ingredientes():
     ingredientes = cursor.fetchall()
     conexion.close()
 
-    print("\nIngredientes:")
-    for ingrediente in ingredientes:
-        print(f"ID: {ingrediente[0]}, Nombre: {ingrediente[1]}, Precio: {ingrediente[2]}, Unidad: {ingrediente[3]}")
+    return ingredientes
 
 def listar_recetas():
     conexion = sqlite3.connect("empacuenta.db")
